@@ -19,12 +19,13 @@ st.markdown(
     .stButton>button {
         width: 100%;
         border-radius: 20px;
-        background-color: #4A7C59;
+        background-color: #0F766E;
         color: white;
         font-weight: bold;
+        border: none;
     }
     .stButton>button:hover {
-        background-color: #3A6346;
+        background-color: #115E59;
         color: white;
     }
     .breathing-box {
@@ -45,10 +46,38 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# 侧边栏：工具选择（已精简）
+# 侧边栏：工具选择
 st.sidebar.title("🧘 冥想助手")
 st.sidebar.markdown("---")
 st.sidebar.info("💡 闭上眼睛，调整呼吸，给自己留出几分钟的平静时光。")
+
+with st.sidebar:
+    st.markdown("### 🌐 Source Code")
+    st.markdown(
+        """
+        <div style="margin-bottom: 12px;">
+            <a href="https://github.com/gangduliu/us-etf-dashboard" target="_blank" style="text-decoration: none;">
+                <div style="background-color: var(--secondary-background-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 14px; text-align: center; color: var(--text-color); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">
+                    ⭐ GitHub Repository
+                </div>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown("### 🍋‍🟩 Support the Author")
+    st.markdown(
+        """
+        <div style="text-align: center; margin-bottom: 10px;">
+            <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 10px;">If this dashboard has been helpful to you, feel free to buy me a lime! 🍋‍🟩</p>
+            <a href="https://buymeacoffee.com/qingning618" target="_blank">
+                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a lime&emoji=🍋‍🟩&slug=qingning618&button_colour=0F766E&font_colour=ffffff&font_family=Inter&outline_colour=ffffff&coffee_colour=FFDD00" style="width: 100%;" alt="Buy Me A Lime">
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # ==================== 核心模块：呼吸引导 ====================
 st.title("✨ 呼吸与正念调息")
