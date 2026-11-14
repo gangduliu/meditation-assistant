@@ -56,7 +56,7 @@ with st.sidebar:
     st.markdown(
         """
         <div style="margin-bottom: 12px;">
-            <a href="https://github.com/gangduliu/us-etf-dashboard" target="_blank" style="text-decoration: none;">
+            <a href="https://github.com/gangduliu/meditation-assistant" target="_blank" style="text-decoration: none;">
                 <div style="background-color: var(--secondary-background-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 14px; text-align: center; color: var(--text-color); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">
                     ⭐ GitHub Repository
                 </div>
