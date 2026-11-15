@@ -1,15 +1,15 @@
 import time
 import streamlit as st
 
-# 页面基本配置
+# Page Configuration
 st.set_page_config(
-    page_title="心灵之港 - 冥想与正念助手",
+    page_title="Meditation & Mindfulness Assistant",
     page_icon="🧘",
     layout="centered",
     initial_sidebar_state="expanded",
 )
 
-# 自定义 CSS 样式
+# Custom CSS Styles
 st.markdown(
     """
     <style>
@@ -46,10 +46,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# 侧边栏：工具选择
-st.sidebar.title("🧘 冥想助手")
+# Sidebar: Tools & Information
+st.sidebar.title("🧘 Meditation Assistant")
 st.sidebar.markdown("---")
-st.sidebar.info("💡 闭上眼睛，调整呼吸，给自己留出几分钟的平静时光。")
+st.sidebar.info("💡 Close your eyes, adjust your breathing, and give yourself a few minutes of peace.")
 
 with st.sidebar:
     st.markdown("### 🌐 Source Code")
@@ -79,18 +79,22 @@ with st.sidebar:
         unsafe_allow_html=True
     )
 
-# ==================== 核心模块：呼吸引导 ====================
-st.title("✨ 呼吸与正念调息")
+# ==================== Core Module: Breathing Guide ====================
+st.title("✨ Breathing & Mindfulness")
 st.write(
-    "4-7-8 呼吸法可以有效缓解焦虑、放松神经。跟随下方的文字提示调整呼吸节奏："
+    "The 4-7-8 breathing technique effectively relieves anxiety and relaxes the nervous system. Follow the prompts below to regulate your breathing rhythm:"
 )
-st.markdown("- **吸气** 4 秒\n- **屏气** 7 秒\n- **呼气** 8 秒")
+st.markdown(
+    "- **Inhale** for 4 seconds\n"
+    "- **Hold** for 7 seconds\n"
+    "- **Exhale** for 8 seconds"
+)
 
 col1, col2 = st.columns(2)
 with col1:
-    start_btn = st.button("开始呼吸训练")
+    start_btn = st.button("Start Breathing Exercise")
 with col2:
-    stop_btn = st.button("停止")
+    stop_btn = st.button("Stop")
 
 placeholder = st.empty()
 
@@ -104,38 +108,38 @@ if stop_btn:
     st.session_state.breathing_active = False
 
 if st.session_state.breathing_active:
-    cycles = 3  # 演示 3 个循环
+    cycles = 3  # Demo 3 cycles
     for i in range(cycles):
         if not st.session_state.breathing_active:
             break
-        # 吸气
+        # Inhale
         for t in range(4, 0, -1):
             placeholder.markdown(
                 f"""
                 <div class="breathing-box" style="background-color: #D1E7DD;">
-                    🌱 请吸气... ({t}s)
+                    🌱 Inhaling... ({t}s)
                 </div>
                 """,
                 unsafe_allow_html=True,
             )
             time.sleep(1)
-        # 屏气
+        # Hold
         for t in range(7, 0, -1):
             placeholder.markdown(
                 f"""
                 <div class="breathing-box" style="background-color: #CFE2FF;">
-                    🌿 保持屏气... ({t}s)
+                    🌿 Holding breath... ({t}s)
                 </div>
                 """,
                 unsafe_allow_html=True,
             )
             time.sleep(1)
-        # 呼气
+        # Exhale
         for t in range(8, 0, -1):
             placeholder.markdown(
                 f"""
                 <div class="breathing-box" style="background-color: #F8D7DA;">
-                    🍃 缓慢呼气... ({t}s)
+                    🍃 Exhaling slowly... ({t}s)
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -145,7 +149,7 @@ if st.session_state.breathing_active:
     placeholder.markdown(
         """
         <div class="breathing-box" style="background-color: #E8F0EC;">
-            ✨ 训练完成，感受内心的宁静。
+            ✨ Exercise complete. Embrace the inner peace.
         </div>
         """,
         unsafe_allow_html=True,
