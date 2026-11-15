@@ -1,27 +1,27 @@
-# 🧘 心灵之港 - 冥想与正念助手 (Meditation Assistant)
+# 🧘 Meditation & Mindfulness Assistant
 
 🔗 **Live Demo**: [https://meditation-assistant-dwehzuqwnepthlak8sz2jz.streamlit.app/](https://meditation-assistant-dwehzuqwnepthlak8sz2jz.streamlit.app/)
 
 ---
 
 ### 🌟 Introduction
-一个基于 **Streamlit** 构建的轻量级、专注且优雅的正念冥想小工具。旨在帮助用户在繁忙的工作和生活中快速放松身心、调整呼吸，找回内心的平静。
+A lightweight, focused, and elegant mindfulness and meditation tool built with **Streamlit**. It is designed to help users quickly relax their body and mind, regulate their breathing, and rediscover inner peace amidst a busy work and life schedule.
 
 ---
 
-## ✨ 核心功能
+## ✨ Core Features
 
-* **🌱 呼吸与正念调息**：内置经典的 **4-7-8 呼吸法** 引导，配合柔和的动态视觉提示框，协助用户调节呼吸节奏、缓解焦虑与压力。
-* **🎨 纯净专注界面**：采用精心调配的自然色系与自定义 CSS 样式，营造宁静、沉浸的冥想氛围，完全适配本地流畅运行。
-* **💻 零复杂依赖**：纯 Python + Streamlit 实现，无需配置复杂的数据库或后端服务，开箱即用。
+- **🌱 Breathing & Mindfulness Regulation**: Built-in guidance for the classic **4-7-8 breathing technique**, paired with soft, dynamic visual prompts to help users regulate their breathing rhythm and relieve anxiety and stress.
+- **🎨 Clean & Focused Interface**: Crafted with carefully curated natural color palettes and custom CSS styles to create a serene, immersive meditation atmosphere, fully optimized for smooth local execution.
+- **💻 Zero Complex Dependencies**: Built purely with Python and Streamlit—no complicated databases or backend services required, ready to use out of the box.
 
 ---
 
 ## 📂 Directory Structure
 ```text
 .
-├── app.py          # Streamlit 主程序与核心交互逻辑
-└── README.md       # 项目说明文档
+├── app.py          # Main Streamlit application and core interactive logic
+└── README.md       # Project documentation
 ```
 
 ---
